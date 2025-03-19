@@ -69,7 +69,7 @@ h1, h2 {
         gap:2rem;
         margin: 0 auto;
     }
-    
+
     nav {
         background-color: #d9043d;
     }
@@ -83,6 +83,10 @@ h1, h2 {
 
     #gallery-container > *:last-child {
         grid-column: span 2;
+    }
+
+    figure {
+        place-items: center;
     }
 
     nav {
