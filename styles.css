@@ -1,0 +1,90 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #cccccc;
+}
+
+.header-container {
+    background-color: #120323;
+    color: #97bf04;
+    text-align: center;
+}
+
+nav, footer {
+    background-color: #d9043d;
+}
+
+footer {
+    text-align: center;
+    padding: 2em;
+    color: white;
+}
+
+nav {
+	display: flex;
+    justify-content: center;
+}
+nav ul li {
+	list-style-type: none;
+	display: inline;
+	margin-right: 1.5rem;
+}
+
+nav ul li a {
+	color: white;
+	text-decoration: none;
+}
+nav ul li a:hover {
+	color: rgb(0, 0, 0);
+	text-decoration: underline;
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 10px solid #97bf04;
+}
+
+figure {
+    background-color: white;
+    padding: 2em;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+@media (min-width: 1000px) {
+    #gallery-container > *:last-child {
+        grid-column: span 2;
+    }
+
+    #gallery-container {
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap:2rem;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 1000px) {
+    #gallery-container {
+        grid-template-columns: 1fr 1fr;
+        display:grid;
+        gap:2rem;
+        margin: 0 auto;
+    }
+
+    #gallery-container > *:last-child {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    #gallery-container {
+        display:grid;
+        grid-template-columns: 1fr;
+    }
+
+    
+}
