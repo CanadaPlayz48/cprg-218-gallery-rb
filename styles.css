@@ -11,7 +11,7 @@ body {
     text-align: center;
 }
 
-nav, footer {
+footer {
     background-color: #d9043d;
 }
 
@@ -19,6 +19,10 @@ footer {
     text-align: center;
     padding: 2em;
     color: white;
+}
+
+#gallery-container {
+    display:grid;
 }
 
 nav {
@@ -55,22 +59,24 @@ h1, h2 {
     text-align: center;
 }
 
-@media (min-width: 1000px) {
+@media screen and (min-width: 1000px) {
     #gallery-container > *:last-child {
         grid-column: span 2;
     }
 
     #gallery-container {
-        display:grid;
         grid-template-columns: repeat(3, 1fr);
         gap:2rem;
         margin: 0 auto;
     }
+    
+    nav {
+        background-color: #d9043d;
+    }
 }
-@media (max-width: 1000px) {
+@media screen and (min-width: 769px) and (max-width: 1000px) {
     #gallery-container {
         grid-template-columns: 1fr 1fr;
-        display:grid;
         gap:2rem;
         margin: 0 auto;
     }
@@ -78,13 +84,29 @@ h1, h2 {
     #gallery-container > *:last-child {
         grid-column: span 2;
     }
+
+    nav {
+        background-color: #d9043d;
+    }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     #gallery-container {
-        display:grid;
         grid-template-columns: 1fr;
     }
 
-    
+    nav ul {
+        width: 95%;
+    }
+	nav ul li {
+		display: block;
+		text-align: center;
+        padding: 1em;
+	}
+	nav ul li a {
+		display: block;
+        background-color: #d9043d;
+        border: 0.2em solid #97bf04;
+        padding: 1em;
+	}
 }
